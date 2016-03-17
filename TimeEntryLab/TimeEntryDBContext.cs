@@ -23,10 +23,6 @@ namespace TimeEntryLab
         public virtual DbSet<Developer> Developers { get; set; }
     }
 
-    public class Developer
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
-    }
+   
+
 }
