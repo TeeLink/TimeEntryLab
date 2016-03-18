@@ -10,6 +10,7 @@ namespace TimeEntryLab.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "TimeEntryLab.TimeEntryDBContext";
         }
 
@@ -32,9 +33,13 @@ namespace TimeEntryLab.Migrations
                 d=> d.Name,
                 new Developer() { EmailAddress =  "tee@link.com", Name = "Tee Link"},
                 new Developer() { EmailAddress =  "daniel@link.com", Name = "Daniel Pollock"}
-                
-
                 );
+
+            context.Projects.AddOrUpdate(
+                  p => p.Name,
+                  new Project() { Name = "Dept. of Agriculture Database", StartDate = new DateTime(2013, 5, 6)},
+                  new Project() { Name = "Secretary of State Website", StartDate = new DateTime(2014, 9, 10)}              
+                  );
         }
-    }
+    } 
 }
