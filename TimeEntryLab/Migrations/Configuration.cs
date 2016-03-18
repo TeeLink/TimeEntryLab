@@ -27,6 +27,14 @@ namespace TimeEntryLab.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Developers.AddOrUpdate(
+                d=> d.Name,
+                new Developer() { EmailAddress =  "tee@link.com", Name = "Tee Link"},
+                new Developer() { EmailAddress =  "daniel@link.com", Name = "Daniel Pollock"}
+                
+
+                );
         }
     }
 }
