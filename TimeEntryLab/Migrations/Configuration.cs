@@ -40,6 +40,14 @@ namespace TimeEntryLab.Migrations
                   new Project() { Name = "Dept. of Agriculture Database", StartDate = new DateTime(2013, 5, 6)},
                   new Project() { Name = "Secretary of State Website", StartDate = new DateTime(2014, 9, 10)}              
                   );
+
+            context.Clients.AddOrUpdate(
+                  p => p.Name,
+                  new Client() { Name = "Dept. of Agriculture Database" },
+                  new Client() { Name = "Secretary of State Website"}
+                  );
+
+
         }
     } 
 }
