@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TimeEntryLab
 {
-    public class Developer
+    public class Project
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string EmailAddress { get; set; }
+        public DateTime StateDate { get; set; }
     }
 }

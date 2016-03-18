@@ -21,6 +21,8 @@ namespace TimeEntryLab
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<Developer> Developers { get; set; }
+
+        public virtual DbSet<Project> Projects { get; set; }
     }
 
    
