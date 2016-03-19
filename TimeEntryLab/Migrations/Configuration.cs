@@ -43,8 +43,8 @@ namespace TimeEntryLab.Migrations
 
             context.Clients.AddOrUpdate(
                   p => p.Name,
-                  new Client() { Name = "Dept. of Agriculture Database" },
-                  new Client() { Name = "Secretary of State Website"}
+                  new Client() { Name = "Dept. of Agriculture" },
+                  new Client() { Name = "Secretary of State"}
                   );
 
 

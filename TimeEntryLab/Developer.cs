@@ -14,6 +14,7 @@ namespace TimeEntryLab
         public string EmailAddress { get; set; }
 
         public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
+        public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
 
         public virtual ICollection<IndustryComment> IndustryComments { get; set; }
         public virtual ICollection<ClientComment> ClientComments { get; set; }
@@ -51,7 +52,7 @@ namespace TimeEntryLab
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<IndustryComment> IndustryComments { get; set; } 
+        public virtual ICollection<IndustryComment> IndustryComments  { get; set; } = new List<IndustryComment>();
     }
     public class IndustryComment
     {
@@ -78,15 +79,14 @@ namespace TimeEntryLab
         public Developer Developer { get; set; }
     }
 
-    //public class Comment
-    //{
-    //    public int Id { get; set; }
-    //    public string Notes { get; set; }
+    public class Group
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
 
-    //    public virtual Industry Industry { get; set; }
-    //    public virtual Client Client { get; set; }
-    //    public virtual Project Project { get; set; }
+        public virtual ICollection<Developer> Developers { get; set; }  
+     
 
-    //    public virtual ICollection<Developer> Developers { get; set; } = new List<Developer>();
-    //}
+    }
+
 }
