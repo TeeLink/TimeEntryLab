@@ -15,6 +15,7 @@ namespace TimeEntryLab
 
         public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
         public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
+        public virtual ICollection<TimeEntry> TimeEntries { get; set; } = new List<TimeEntry>();
 
         public virtual ICollection<IndustryComment> IndustryComments { get; set; } = new List<IndustryComment>();
         public virtual ICollection<ClientComment> ClientComments { get; set; } = new List<ClientComment>();
@@ -30,6 +31,7 @@ namespace TimeEntryLab
         public DateTime StartDate { get; set; }
         public virtual Client Client { get; set; }
         public virtual ICollection<Developer> Developers { get; set; } = new List<Developer>();
+        public virtual ICollection<TimeEntry> TimeEntries { get; set; } = new List<TimeEntry>();
 
         public virtual ICollection<ProjectComment> ProjectComments { get; set; } = new List<ProjectComment>();
 
@@ -85,8 +87,19 @@ namespace TimeEntryLab
         public string Name { get; set; }
 
         public virtual ICollection<Developer> Developers { get; set; } = new List<Developer>();
-     
 
     }
 
-}
+    public class TimeEntry
+        {
+            public int Id { get; set; }
+            public DateTime DateWorked { get; set; }
+            public int HoursWorked { get; set; }
+            public Developer Developer { get; set; }
+            public Project Project { get; set; }
+        }
+
+
+    }
+
+
