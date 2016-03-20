@@ -24,6 +24,7 @@ namespace TimeEntryLab
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Industry> Industries { get; set; }
+        public virtual DbSet<Group> Groups { get; set; }
 
     }
 

@@ -65,7 +65,7 @@ namespace TimeEntryLab
     {
         public int Id { get; set; }
         public string Note { get; set; }
-        public Client Industry { get; set; }
+        public Client Client { get; set; }
         public Developer Developer { get; set; }
 
         public virtual ICollection<ClientComment> ClientComments { get; set; } = new List<ClientComment>();
@@ -75,7 +75,7 @@ namespace TimeEntryLab
     {
         public int Id { get; set; }
         public string Note { get; set; }
-        public Project Industry { get; set; }
+        public Project Project { get; set; }
         public Developer Developer { get; set; }
     }
 
